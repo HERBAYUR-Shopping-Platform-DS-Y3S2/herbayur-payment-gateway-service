@@ -30,3 +30,5 @@ const PORT = process.env.PORT || 5005;
 
 app.use(express.static(path.join(__dirname, '/client/build')))
    .listen(PORT, () => console.log(`Listening on ${PORT}`));
+
+   module.exports = app;
