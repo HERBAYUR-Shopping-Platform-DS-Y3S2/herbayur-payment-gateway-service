@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: herbayur-payment-gateway-service
+spec:
+  type: LoadBalancer
+  ports:
+    - protocol: TCP
+      port: 5005
+      targetPort: 5005
+  selector:
+    app: herbayur-payment-gateway-service-app
+
+# //service.yaml file
+# -----------------------------
+# services:
+
+#   inventory:
+#     git_url: https://github.com/HERBAYUR-Shopping-Platform-DS-Y3S2/herbayur-payment-gateway-service/tree/develop
+#     git_branch: develop
+#     command: npm start
+#     build_root: .
+#     ports:
+#       - container: 5005
+#         http: 50
+#         https: 443
+#     env_vars:
+#       NODE_ENV: production
+
+# databases:  
+#   - mongodb
